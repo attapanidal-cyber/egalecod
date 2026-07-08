@@ -47,6 +47,7 @@
             list-style: none;
             display: flex;
             gap: 20px;
+            align-items: center; /* Button aur text ko center karne ke liye */
         }
 
         nav ul li a {
@@ -58,6 +59,20 @@
 
         nav ul li a:hover {
             color: var(--accent-color);
+        }
+
+        /* Navbar Button Style */
+        .nav-btn {
+            background-color: var(--accent-color);
+            color: #000 !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: #00ccaa;
         }
 
         /* Hero Section */
@@ -180,6 +195,7 @@
                 <li><a href="#">Reviews</a></li>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Esports</a></li>
+                <li><a href="#" class="nav-btn">Contact Info</a></li>
             </ul>
         </nav>
     </header>
