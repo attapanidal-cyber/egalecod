@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone - Gaming Info</title>
+    <style>
+        /* CSS Variables for Theme */
+        :root {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --accent-color: #00ffcc;
+            --card-bg: #1e1e1e;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #0a0a0a;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        header h1 {
+            color: var(--accent-color);
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #cccccc;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background-color: var(--accent-color);
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #00ccaa;
+        }
+
+        /* Gaming Info / Grid Section */
+        .games-section {
+            padding: 60px 10%;
+        }
+
+        .games-section h3 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: var(--accent-color);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 255, 204, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h4 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            font-size: 14px;
+            color: #aaaaaa;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0a0a0a;
+            border-top: 1px solid #333;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>GameZone</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Esports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Level Up Your Knowledge</h2>
+        <p>Get the latest updates, reviews, and info on your favorite games.</p>
+        <a href="#" class="btn">Explore Now</a>
+    </section>
+
+    <section class="games-section">
+        <h3>Trending Games Info</h3>
+        <div class="grid-container">
+            
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1605901309584-818e25960b8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Cyberpunk Style Game">
+                <div class="card-content">
+                    <h4>Cyber RPG 2077</h4>
+                    <p>An open-world, action-adventure story set in a dystopian megalopolis obsessed with power, glamour and body modification.</p>
+                    <a href="#" class="read-more">Read Full Info &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Fantasy Game">
+                <div class="card-content">
+                    <h4>Fantasy Quest III</h4>
+                    <p>Embark on a mythical journey across endless landscapes. Battle dragons, build alliances, and conquer the throne.</p>
+                    <a href="#" class="read-more">Read Full Info &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="FPS Game">
+                <div class="card-content">
+                    <h4>Tactical Strike</h4>
+                    <p>A fast-paced competitive shooter where strategy meets raw skill. Team up and defuse the core before time runs out.</p>
+                    <a href="#" class="read-more">Read Full Info &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 GameZone. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
